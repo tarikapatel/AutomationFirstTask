@@ -21,6 +21,8 @@ public class NewsComments {
         driver.findElement(By.id("AddNewComment_CommentText")).sendKeys("Good Website");
         //Click on NewComment button
         driver.findElement(By.xpath("//button[@class='button-1 news-item-add-comment-button']")).click();
+        String actualText = driver.findElement(By.xpath("//div[@class='result']")).getText();
+        System.out.println(actualText);
         //close browser
         driver.close();
 

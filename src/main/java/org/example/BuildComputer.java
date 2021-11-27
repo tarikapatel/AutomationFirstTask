@@ -23,6 +23,9 @@ public static void main(String[]args){
     driver.findElement(By.xpath("//ul[@class='sublist']/li[1]/a")).click();
     //click on Build your computer
     driver.findElement(By.xpath("//div[@class='product-item']/div[2]/h2/a[@href='/build-your-own-computer']")).click();
+    //verify expected result=actual results
+    String actualText = driver.findElement(By.xpath("//div[@class='product-name']/h1")).getText();
+    System.out.println(actualText);
     //close browser
     driver.close();
 }

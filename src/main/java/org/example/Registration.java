@@ -23,18 +23,19 @@ public class Registration {
         //click on Register button
         driver.findElement(By.xpath("//a[@class='ico-register']")).click();
         //type first name
-        driver.findElement(By.id("FirstName")).sendKeys("Testerone");
+        driver.findElement(By.id("FirstName")).sendKeys("Testertwo");
         //type second name
-        driver.findElement(By.id("LastName")).sendKeys("Testingone");
+        driver.findElement(By.id("LastName")).sendKeys("Testingtwo");
         //type email
-        driver.findElement(By.id("Email")).sendKeys("Testerone@getnada.com");
+        driver.findElement(By.id("Email")).sendKeys("Testertwo@getnada.com");
         //type Password
         driver.findElement(By.id("Password")).sendKeys("Testone123!");
         //type confirm password
         driver.findElement(By.id("ConfirmPassword")).sendKeys("Testone123!");
         //click on register button
         driver.findElement(By.id("register-button")).click();
-
+        String actualText = driver.findElement(By.xpath("//div[@class='result']")).getText();
+        System.out.println(actualText);
         //close browser
         //driver.close();
     }
